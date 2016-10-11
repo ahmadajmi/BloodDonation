@@ -22,7 +22,7 @@ function ShowProgressAnimation() {
 function show_notification_system(msg) {
   $(document).ready(function() {
     $.meow({
-      title: 'faselty says:',
+      title: 'فصيلتي تخبرك',
       message: msg,
       // duration: 300000
     });

@@ -26,7 +26,7 @@
 
       .form-set
         = f.label :address, class: 'label'
-        %input#searchTextField{ autocomplete: 'on', placeholder: 'Enter a location', runat: 'server', size: '50', type: 'text', value: current_user.location_name, class: 'input search' }
+        %input#searchTextField{ autocomplete: 'on', runat: 'server', size: '50', type: 'text', value: current_user.location_name, class: 'input search' }
 
         = f.text_field :location_name, autofocus: true, id: 'addName', class: 'location_name', hidden: true
         = f.text_field :location_lat, autofocus: true, id: 'addLat', class: 'location_lat', hidden: true
@@ -41,23 +41,23 @@
 
       .form-set
         = f.label :'birth date', class: 'label'
-        = f.text_field :birth_date, required: '', placeholder: 'Enter your Birth Date', id: 'datepicker', class: 'input dtpicker'
+        = f.text_field :birth_date, required: '', id: 'datepicker', class: 'input dtpicker'
 
       .form-set
         = f.label :'national ID', class: 'label'
-        = f.text_field :nationalid, autofocus: true, required: 'Enter your national id', placeholder: 'Enter your national id', class: 'input'
+        = f.text_field :nationalid, autofocus: true, class: 'input'
 
       .form-set
         = f.label :'last donation date', class: 'label'
-        = f.text_field :lastdonation, placeholder: 'Enter your last date of donation', id: 'picker', class: 'input dtpicker'
+        = f.text_field :lastdonation, id: 'picker', class: 'input dtpicker'
 
       .form-set
         = f.label 'Hide Account Information', class: 'label'
-        = f.select :hide_account, options_for_select([['False', 'false'], ['True', 'true']], @user.hide_account), {}, class: 'input'
+        = f.select :hide_account, options_for_select(t('true_or_false').invert, @user.hide_account), {}, class: 'input'
 
       .form-set
         = f.label 'Stop receiving Messages by email when new cases matches my blood type', class: 'label'
-        = f.select :stop_getting_email, options_for_select([['False', 'false'], ['True', 'true']], @user.stop_getting_email), {}, class: 'input'
+        = f.select :stop_getting_email, options_for_select(t('true_or_false').invert, @user.stop_getting_email), {}, class: 'input'
 
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
@@ -65,7 +65,8 @@
 
       .form-set
         = f.label :password, class: 'label'
-        %i (leave blank if you don't want to change it)
+        %span.label
+          = t('password_sub_label')
         = f.password_field :password, autocomplete: 'off', class: 'input'
 
       .form-set
@@ -73,8 +74,9 @@
         = f.password_field :password_confirmation, autocomplete: 'off', class: 'input'
 
       .form-set
-        = f.label :current_password
-        %i (we need your current password to confirm your changes)
+        = f.label :current_password, class: 'label'
+        %span.label
+          = t('current_password_sub_label')
         = f.password_field :current_password, autocomplete: 'off', class: 'input'
 
       .form-set

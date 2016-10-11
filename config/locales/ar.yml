@@ -51,6 +51,7 @@ ar:
 
   # Requests
   show_all_requests: 'عرض الحالات الكاملة'
+  no_requests_yet: 'لا توجد طلبات في الوقت الحالي'
 
   # Related Requests
   related_requests_title: 'الطلبات المتوافقة مع فصيلة دمي'
@@ -82,7 +83,13 @@ ar:
   profile_edit_page_title: 'تعديل الحساب'
   update: 'تحديث'
   cancel_my_account: 'إلغاء الحساب'
+  enter_a_location: 'ادخل العنوان'
   cancel_my_accountـnotification: 'هل أنت متأكد أنك تريد إلغاء الحساب؟'
+  password_sub_label: '(اتركه فارغاً إذا كنت لا تود تغييره)'
+  current_password_sub_label: '(نريد منك كلمة السر الحالية لتأكيد التغييرات)'
+  true_or_false:
+    true: 'نعم'
+    false: 'لا'
 
   # Log In Page
   login_title: 'تسجيل الدخول كمتبرع'
@@ -93,7 +100,7 @@ ar:
   login: 'دخول'
   forgot_your_password: 'نسيت كلمة السر؟'
 
-  #users/confirmation
+  # Users/confirmation
   resend_confirmation: 'Resend confirmation instructions'
 
   # Passwords
@@ -124,6 +131,11 @@ ar:
   twitter: 'تويتر'
   facebook: 'فيسبوك'
 
+  # Validation
+  phone_length: 'رقم الهاتف يجب أن يكون 11 رقم'
+
+  national_id_length: 'بطاقة الرقم القومي يجب أن تكون 14 رقم'
+
   helpers:
     label:
       user:
@@ -131,16 +143,19 @@ ar:
         email: 'البريد الإلكتروني'
         address: 'العنوان'
         gender: 'النوع'
-        'blood type': 'فصيلة الدم'
-        'phone number': 'رقم الهاتف'
-        'birth date': 'تاريخ الميلاد'
-        'national ID': 'الرقم القومي'
-        'last donation date': 'آخر موعد تبرعت فيه بالدم'
+        blood type: 'فصيلة الدم'
+        phone number: 'رقم الهاتف'
+        birth date: 'تاريخ الميلاد'
+        national ID: 'الرقم القومي'
+        last donation date: 'آخر موعد تبرعت فيه بالدم'
         num_of_active_requests: ''
         password: 'كلمة السر'
         password_confirmation: 'تأكيد كلمة السر'
+        current_password: 'كلمة السر الحالية'
         remember_me: 'تذكرني'
         phone: 'رقم الهاتف'
+        Hide Account Information: 'اخف بيانات الحساب'
+        Stop receiving Messages by email when new cases matches my blood type: 'توقف عن استقبال رسائل عبر بريدك الإلكتروني في حالة تطابق بعض الحالات مع فصيلة دمي'
       request:
         contact name: 'الاسم'
         contact phone: 'رقم الهاتف'
@@ -152,4 +167,3 @@ ar:
         blood bag: 'عدد أكياس الدم'
         hospital name: 'إسم المستشفى'
         hospital address: 'عنوان المستشفى'
-
